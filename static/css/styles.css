@@ -1,0 +1,13 @@
+
+.container {
+  margin: 0 auto;
+  min-width: 500px;
+  width: 45%;
+  text-align: left;
+  color: #3b3b3b;
+  font-weight: bold;
+}
+
+.warning {
+  color: red;
+  }

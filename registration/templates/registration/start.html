@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Регистрация</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+	<meta content="text/html">
+	
+</head>
+<body>
+	<div class="container">
+			<div class="main_content col-8">
+				{% block main_content %}
+				{% if message %}
+				<h1 class="warning">{{message}}</h1>
+				{% endif %}
+                	<h1>Введите логин и пароль</h1>
+	                    <form action="." method="post">
+	                    	{{ form.as_p }}
+	                    	{% csrf_token %}
+	                       	<p><button class="add" type="submit">Регистрация</button></p>
+	                    </form>
+				{% endblock %}
+			</div>
+	</div>
+</body>
+</html>
